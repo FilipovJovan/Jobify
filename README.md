@@ -2,6 +2,46 @@
 
 #### Full-stack job management platform built with React, Express, MongoDB and JWT-based authentication
 
+# Setup Instructions
+
+## 1. Clone Repository
+- git clone https://github.com/FilipovJovan/Jobify
+- cd jobify
+
+## 2. Install Dependencies
+
+#### Install dependencies for both backend and frontend
+
+- npm install
+- cd client
+- npm install
+
+## 3. Environment Variables
+#### Create a .env file in the root directory.
+#### Example configuration
+- PORT=5000
+- MONGO_URL=your_mongodb_connection_string
+- JWT_SECRET=your_jwt_secret_key
+- JWT_EXPIRES_IN=1d
+- NODE_ENV=development
+
+## 4. Run the Application (Development)
+#### Run backend and frontend simultaneously.
+- npm run dev
+#### This will start:
+- Express API -> http://localhost:5000
+- React client -> http://localhost:5173
+
+## 5. Build for Production
+#### Build the React frontend:
+- cd client
+- npm run build
+#### Then start the production server:
+- npm start
+#### Express will serve the static frontend build.
+
+# Project description
+
 ## 1. Problem
 
 #### Design and implement a secure SaaS platform allowing authenticated users to manage job applications, with proper access control, pagination, filtering, and production-ready authentication architecture.
