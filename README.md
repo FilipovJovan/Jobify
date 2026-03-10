@@ -39,7 +39,6 @@
 - Enum-based job status & type fields
 - Timestamps for audit tracking
 
-#### Each job is scoped to its creator to prevent cross-user data exposure.
 
 ## 6. API Design
 
