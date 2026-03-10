@@ -15,20 +15,15 @@
 - Security: HTTP-only cookies for refresh tokens
 
 ## 3. Authentication Design
+#### The application uses JWT-based authentication stored in an HTTP-only cookie.
+#### Token characteristics:
 
-#### Access Token:
+- Signed JWT containing userId and role
+- Verified on every protected request via Express middleware
+- Stored in an HTTP-only cookie to mitigate XSS attacks
+- secure flag enabled in production environments
 
-- Short-lived JWT
-- Contains userId and role
-- Verified on every protected request
-
-#### Refresh Token:
-
-- Stored as HTTP-only cookie
-- Secure flag enabled in production
-- Prevents XSS-based token theft
-
-#### Tokens are not stored in localStorage to reduce attack surface
+#### Future Improvement: Introduce a short-lived access token and long-lived refresh token strategy to improve session security and enable token rotation.
 
 ## 4. Authorization $ Route Protection
 
