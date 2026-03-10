@@ -11,8 +11,8 @@
 - Frontend: React + React Router (nested protected routes)
 - Backend: Express REST API
 - Database: MongoDB (Mongoose ODM)
-- Authentication: JWT (Access + Refresh strategy)
-- Security: HTTP-only cookies for refresh tokens
+- Authentication: JWT token
+- Security: HTTP-only cookies for JWT tokens
 
 ## 3. Authentication Design
 #### The application uses JWT-based authentication stored in an HTTP-only cookie.
